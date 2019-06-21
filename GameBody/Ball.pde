@@ -2,9 +2,10 @@ class Ball{
   int x,y;
   int speed=1;
   int size=5;
+  int w = 500, h = 800;
   Ball(){
-    x = 500 /2;
-    y = 800 - size;
+    x = w /2;
+    y = h - size;
   }
   void display(){
     fill(0);
@@ -28,13 +29,16 @@ class Ball{
       }
     }
   }
-  boolean judgeObstacleBall(Object o){
+  boolean judgeObstacleBall(){
     //hit
+    //return false;
+    //else{
     return true;
-    //else{return false;}
+  //}
   }
   
   void returnBall(){
-    //?
+    x = w /2;
+    y = h - size;
   }
 }

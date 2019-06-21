@@ -13,7 +13,6 @@ int max;
 int rank;
 
 void draw(){
-  background(255);
   printBackground(max,rank);
   o.move();
   o.display();
