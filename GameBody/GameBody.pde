@@ -1,3 +1,5 @@
+int w=500;
+int h=800;
 
 void setup(){
  size(500,800);
