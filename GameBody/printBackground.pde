@@ -29,4 +29,9 @@ void printBackground(int max,int rank){
   fill(0,255,0);
   rect(0,B,width,C);
   
+  int t = returnTimecount();
+  fill(0);
+  textSize(30);
+  text(nf(t, 2), width-40, 30);
+  
 }

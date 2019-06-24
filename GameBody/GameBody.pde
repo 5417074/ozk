@@ -1,6 +1,10 @@
 int w=500;
 int h=800;
-int startCnt=1;
+int x, y;
+int startCnt=0;
+int timeCounter = 0;  
+int limitTime = 10;
+
 void setup() {
   size(500, 800);
 }
@@ -14,8 +18,8 @@ int max;
 int rank;
 
 void draw() {
-  //startGame();
-  gameEnd();
+  startGame();
+  //gameEnd();
 }
 
 
@@ -50,8 +54,15 @@ void playGame() {
   if (b.judgeObstacleBall()==false) {
     b.returnBall();
   }
-
- // t.countTime();
+  
+  int t = returnTimecount();
+  char rank = returnRank(y);
+  if (rank == 'S') {
+   // clearDisplay();
+  } else if (t <= 0) {
+    //TimeOverDisplay();
+    
+  }
 
   judgeGame();
 }

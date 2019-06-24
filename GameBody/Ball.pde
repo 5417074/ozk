@@ -1,8 +1,8 @@
 class Ball {
-  int x, y;
+  
   int speed=1;
   int size=5;
-  int w = 500, h = 800;
+ 
   Ball() {
     x = w /2;
     y = h - size;
