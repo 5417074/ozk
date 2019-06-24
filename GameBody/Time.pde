@@ -1,4 +1,15 @@
-class Time {
+
+int returnTimecount() {
+  timeCounter += 1;
+  if (timeCounter % 60 == 0) {
+    limitTime -= 1;
+  }
+  return limitTime;
+}
+
+
+
+/*class Time {
   
   int timeLimit = 99;
   int countDown;
@@ -26,3 +37,5 @@ class Time {
   }
 }
   
+  
+  */
