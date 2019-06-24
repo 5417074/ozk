@@ -24,6 +24,7 @@ void draw() {
     break;
   case 1:
     playGame();
+    
     break;
   }
   //gameEnd();

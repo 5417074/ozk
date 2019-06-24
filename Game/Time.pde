@@ -1,41 +1,23 @@
 
 int returnTimecount() {
-  timeCounter += 1;
-  if (timeCounter % 60 == 0) {
-    limitTime -= 1;
-  }
-  return limitTime;
-}
 
-
-
-/*class Time {
-  
   int timeLimit = 99;
   int countDown;
+  int ms = millis()/1000;
+  println(ms);
 
-  int countTime() {
-    
-    int ms = millis()/1000;
-    println(ms);
+  fill(0);
+  countDown = timeLimit - ms;
+  if (countDown > 0) {
 
-    fill(0);
-    countDown = timeLimit - ms;
-    if (countDown > 0) {
-
-      if (countDown <= 10) {
-        fill(255, 0, 0);
-      }
-      fill(255);
-      rect(width - 62, height - 80, 40, 40);
-      textSize(30);
-      fill(0);
-      text(+countDown, width - 60, height - 50);
-
+    if (countDown <= 10) {
+      fill(255, 0, 0);
     }
-    return countDown;
+    fill(255);
+    rect(width - 62, height - 80, 40, 40);
+    textSize(30);
+    fill(0);
+    text(+countDown, width - 60, height - 50);
   }
+  return countDown;
 }
-  
-  
-  */
