@@ -5,6 +5,6 @@ abstract class Object{
 
   abstract void move();
   abstract void display();
-  abstract void judge(int x,int y);
+  abstract void judge(int x,int y,int w,int h);
   
 }
