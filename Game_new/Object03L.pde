@@ -21,5 +21,17 @@ class Object03L extends Object {
   void display() {
   }
   void judge(int bx, int by, int d) {
+    //println(ballY);
+    if (x<=bx+d/2 && bx-d/2<=x+rx && y<=by+d/2 && by-d/2<=y+ry) {
+      char rank = returnRank(ballY);
+      if (rank=='C') {
+        ballY=C;
+      } else if (rank=='B') {
+        ballY=B;
+      } else if (rank =='A') {
+        ballY=A;
+      }
+      println("左から来た四角にぶつかった！！");
+    }
   }
 }

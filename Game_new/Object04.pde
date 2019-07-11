@@ -19,5 +19,18 @@ class Object04 extends Object {
   void display() {
   }
   void judge(int bx, int by, int d) {
+    
+    if (x-r/2<=bx+d/2 && bx+d/2<=x+r/2 
+    && (r/2+d/2)*(r/2+d/2)>= (bx-x)*(bx-x) + (by-y)*(by-y)) {
+      char rank = returnRank(ballY);
+      if (rank=='C') {
+        ballY=C;
+      } else if (rank=='B') {
+        ballY=B;
+      } else if (rank =='A') {
+        ballY=A;
+      }
+      println("落下する丸にぶつかった！！");
+    }
   }
 }
