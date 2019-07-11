@@ -1,0 +1,3 @@
+void levelDisplay() {
+  textAlign(CENTER);
+}
