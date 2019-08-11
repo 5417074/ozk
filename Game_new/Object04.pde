@@ -3,6 +3,12 @@ class Object04 extends Object {
   int r,y;
   Object04(int cnt){
     super(cnt);
+    r = int(random(20,100));
+    if(cnt == 0){
+      y = int(random(-r,h-200));
+    }else{
+      y = -r;
+    }
   }
   int x = int(random(w-r));
   
@@ -11,12 +17,23 @@ class Object04 extends Object {
   color c = 155;
   
   void move() {
+    x += speedX;
+    y += speedY;
+    if (0 > x - r/2 || width <= x+r/2) {
+      speedX*=-1;
+    }
   }
   boolean outDisplay(){
+    if(y-r/2 > height){
+      return true;
+    }
     return false;
   }
   
   void display() {
+    //fill(c);
+    fill(c1,c2,c3);
+    ellipse(x, y, r, r);
   }
   void judge(int bx, int by, int d) {
     

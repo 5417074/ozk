@@ -13,11 +13,19 @@ class Object03R extends Object {
   color c = 155;
   
   void move() {
+    x -= speedX;
+    //x -= int(random(-4, 4)) + speedX;
   }
   boolean outDisplay(){
+    if(x+rx < 0){
+      return true;
+    }
     return false;
   }
   void display() {
+    //fill(c);
+    fill(c1,c2,c3);
+    rect(x, y, rx, ry);
   }
   void judge(int bx, int by, int d) {
     //println(ballY);

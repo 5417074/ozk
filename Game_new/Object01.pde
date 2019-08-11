@@ -3,14 +3,21 @@ class Object01 extends Object {
     super(cnt);
   }
   
-  int Ox,Oy,Ow,Oh; 
-  int speedX,speedY;
+  int Ox=width/2, Oy=height/2, Ow=100, Oh=100; 
+  int speedX=1, speedY=1;
 
-  color c;
+  color c=155;
   
   void move() {
+    Ox+=speedX;
+    Oy+=speedY;
+    if (width<Ox+Ow) {
+      speedX*=-1;
+    }
   }
   void display() {
+    fill(c);
+    rect(Ox, Oy, Ow, Oh);
   }
   
   void judge(int bx, int by, int d) {
