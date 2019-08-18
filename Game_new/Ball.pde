@@ -4,6 +4,7 @@ class Ball {
 
   void display() {
     fill(0);
+    //image( img, ballX-15, ballY-15 );
     ellipse(ballX, ballY, ballD, ballD);
   }
   void move() {

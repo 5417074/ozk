@@ -1,6 +1,6 @@
 int returnTimecount(int startTime) {
 
-  int timeLimit = 20 + startTime;
+  int timeLimit = Lt + startTime;
   int countDown;
   int ms = millis()/1000;
   //println(ms);

@@ -1,10 +1,12 @@
-int w=500, h=800;
+int w=700, h=1000;
 int ballD=5, ballX=w /2, ballY=h - ballD;
 char clearRank = 0;
 int startTime;
 int oLen = 20;
 int clearTime;
 int Lt = 20;
+
+PImage img;
 
 boolean start=false;
 boolean play=false;
@@ -23,8 +25,11 @@ Ball b=new Ball();
 Object[] o = new Object[oLen];
 
 void setup() {
-  size(500, 800);
+  size(700, 1000);
   noStroke();
+  //画像読み込み
+  frameRate( 100 );
+  img = loadImage( "mero.png" );
 }
 
 void draw() {
